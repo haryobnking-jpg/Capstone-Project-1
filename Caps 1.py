@@ -197,7 +197,7 @@ def visualisasi_data():
             plt.show()
 
         elif pilihan == "7":
-            cursor.execute("SELECT Nama,Nilai FROM nilai_siswa")
+            cursor.execute("SELECT Nama,Nilai FROM nilai_siswa ORDER BY Nilai DESC LIMIT 10")
             data = cursor.fetchall()
             Nama = [row[0] for row in data]
             Nilai = [row[1] for row in data]
